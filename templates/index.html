@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <header id="header">
+        <h1>Aolakije</h1>
+        <nav id="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#portfolio">Projects</a>
+            <a href="#services">Services</a>
+            <button class="nav-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contact</button>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-text">
+            <p>👋 Hello,</p>
+            <h2><span>I'm </span>Adeola Olakijena</h2>
+            <h3>Full Stack Web Developer</h3>
+            <button class="hero-btn" onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})">
+                Previous Projects
+            </button>
+        </div>
+        <img src="static/img/Aolakije.png" alt="Profile Picture" class="hero-img">
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-image">👨‍💻</div>
+            <div class="about-text">
+                <p>I'm a passionate full stack developer with expertise in building modern web and mobile applications. With years of experience in both frontend and backend technologies, I create solutions that are not only functional but also beautiful and user-friendly.</p>
+                <p>My journey in tech started with a curiosity to understand how things work, and it evolved into a professional career where I help businesses bring their ideas to life through code.</p>
+                <p>I specialize in Go, C, JavaScript, React, Node.js, and various databases. I'm always learning and staying updated with the latest technologies to deliver cutting-edge solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="portfolio-nav">
+            <button class="active" onclick="filterProjects('all')">All</button>
+            <button onclick="filterProjects('mobile')">Mobile App</button>
+            <button onclick="filterProjects('website')">Website</button>
+            <button onclick="filterProjects('desktop')">Desktop</button>
+            <button onclick="filterProjects('other')">Other Projects</button>
+        </div>
+        <div class="projects-grid" id="projectsGrid">
+            <div class="project-card" data-category="website">
+                <div class="project-image">🌐</div>
+                <div class="project-info">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A fully responsive online shopping platform with secure payment integration and real-time inventory management.</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="mobile">
+                <div class="project-image">📱</div>
+                <div class="project-info">
+                    <h3>Fitness Tracker App</h3>
+                    <p>Mobile application for tracking workouts, nutrition, and progress with personalized recommendations and analytics.</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="website">
+                <div class="project-image">💼</div>
+                <div class="project-info">
+                    <h3>Business Dashboard</h3>
+                    <p>Interactive dashboard for data visualization and business analytics with real-time updates and reporting features.</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="desktop">
+                <div class="project-image">🖥️</div>
+                <div class="project-info">
+                    <h3>Task Management Tool</h3>
+                    <p>Desktop application for project management with team collaboration features and automated workflow tools.</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="mobile">
+                <div class="project-image">🎵</div>
+                <div class="project-info">
+                    <h3>Music Streaming App</h3>
+                    <p>Cross-platform music application with offline playback, playlist creation, and social sharing capabilities.</p>
+                </div>
+            </div>
+            <div class="project-card" data-category="other">
+                <div class="project-image">🤖</div>
+                <div class="project-info">
+                    <h3>AI Chatbot System</h3>
+                    <p>Intelligent conversational AI with natural language processing for customer support and automation.</p>
+                </div>
+            </div>
+        </div>
+        <button class="view-all-btn">View All Projects</button>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Web Development</h3>
+                <p>Building responsive and dynamic websites using modern frameworks and best practices for optimal performance.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Mobile App Development</h3>
+                <p>Creating native and cross-platform mobile applications with intuitive user experiences and robust functionality.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>UI/UX Design</h3>
+                <p>Designing beautiful and user-friendly interfaces that enhance engagement and provide seamless interactions.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚀</div>
+                <h3>SEO Optimization</h3>
+                <p>Improving website visibility and search rankings through strategic optimization and performance enhancements.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-container">
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Aolakije. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
