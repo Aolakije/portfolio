@@ -130,12 +130,12 @@ nav a:hover {
 
 .hero-text p {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: white;
     animation: fadeInUp 0.8s ease;
     margin: 0;
-    color: white;
 }
- .hero-text span {
+
+.hero-text span {
     color: white;
     font-size: 3.5rem;
     font-weight: 900;
@@ -150,8 +150,8 @@ nav a:hover {
     margin: 15px 0 30px 0;
     margin-top: -10px;
     color: #141318;
-  text-shadow: 1px 1px 0 #ffffff, 
-               6px 6px 6px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 0 #ffffff, 
+                 6px 6px 6px rgba(0, 0, 0, 0.3);
 }
 
 .hero-text h3 {
@@ -163,8 +163,8 @@ nav a:hover {
     margin-bottom: 15px;
     margin-top: -25px;
     color: #141318;
-  text-shadow: 1px 1px 0 #989797, 
-               3px 3px 6px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 0 #989797, 
+                 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .hero-btn {
@@ -210,26 +210,26 @@ section {
     font-size: 1rem;
     margin-bottom: 15px;
     text-align: center;
-    text-transform:capitalize;
+    text-transform: capitalize;
     letter-spacing: 3px;
 }
 
 /* About Section */
+#about {
+    text-align: center;
+}
+
+#about .section-title {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
 .about-content {
     max-width: 900px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 50px;;
-}
-#about {
-    text-align: center;
-    
-}
-
-#about .section-title {
-display: inline-block;
-padding: 10px 20px;
+    gap: 50px;
 }
 
 .about-image {
@@ -352,11 +352,11 @@ padding: 10px 20px;
     transform: translateY(-2px);
 }
 
+/* Services Section */
 #services {
     padding-top: 20px;
 }
 
-/* Services Section */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -474,6 +474,7 @@ padding: 10px 20px;
     box-shadow: 0 5px 15px rgba(136, 162, 191, 0.4);
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px 0;
@@ -582,6 +583,10 @@ footer {
         font-size: 3rem;
     }
 
+    .hero-text h3 {
+        font-size: 2rem;
+    }
+
     .hero-text p {
         font-size: 1.2rem;
     }
@@ -677,6 +682,10 @@ footer {
     .hero-text h2 {
         font-size: 2.5rem;
         margin: 10px 0 20px 0;
+    }
+
+    .hero-text h3 {
+        font-size: 1.5rem;
     }
 
     .hero-btn {
@@ -788,6 +797,10 @@ footer {
         font-size: 2rem;
     }
 
+    .hero-text h3 {
+        font-size: 1.25rem;
+    }
+
     .hero-text p {
         font-size: 1rem;
     }
@@ -832,6 +845,10 @@ footer {
 
     .hero-text h2 {
         font-size: 1.75rem;
+    }
+
+    .hero-text h3 {
+        font-size: 1rem;
     }
 
     .hero-img {

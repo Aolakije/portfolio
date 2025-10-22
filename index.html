@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Stack Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header id="header">
         <h1>Aolakije</h1>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <nav id="nav">
             <a href="#home">Home</a>
             <a href="#about">About Me</a>
@@ -45,11 +51,11 @@
     <section id="portfolio">
         <h2 class="section-title">Portfolio</h2>
         <div class="portfolio-nav">
-            <button class="active" onclick="filterProjects('all')">All</button>
-            <button onclick="filterProjects('mobile')">Mobile App</button>
-            <button onclick="filterProjects('website')">Website</button>
-            <button onclick="filterProjects('desktop')">Desktop</button>
-            <button onclick="filterProjects('other')">Other Projects</button>
+            <button class="active" onclick="filterProjects('all', event)">All</button>
+            <button onclick="filterProjects('mobile', event)">Mobile App</button>
+            <button onclick="filterProjects('website', event)">Website</button>
+            <button onclick="filterProjects('desktop', event)">Desktop</button>
+            <button onclick="filterProjects('other', event)">Other Projects</button>
         </div>
         <div class="projects-grid" id="projectsGrid">
             <div class="project-card" data-category="website">
@@ -144,7 +150,8 @@
             </form>
         </div>
     </section>
-    <footer>
+    
+    <footer class="footer">
         <p>&copy; 2025 Aolakije. All rights reserved.</p>
     </footer>
 
