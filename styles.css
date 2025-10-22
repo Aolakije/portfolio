@@ -19,7 +19,7 @@
 
 @font-face {
     font-family: 'Anurati';
-    src: url('../static/Fonts/Anurati.otf') format('opentype'); 
+    src: url('Fonts/Anurati.otf') format('opentype'); 
 }
 
 body {
