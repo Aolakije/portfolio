@@ -86,22 +86,65 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Contact form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const statusElement = document.getElementById('form-status');
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        if (statusElement) statusElement.textContent = '';
+        
+        // Prepare form data
+        const formData = new FormData(contactForm);
+        
+        try {
+            // Send to Formspree
+            const response = await fetch('https://formspree.io/f/xovplbqk', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
             
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            if (response.ok) {
+                // Success
+                alert(`Thank you, ${name}! Your message has been sent successfully. I'll get back to you at ${email} soon.`);
+                
+                // Show success message if status element exists
+                if (statusElement) {
+                    statusElement.textContent = '✓ Message sent successfully!';
+                    statusElement.className = 'success';
+                }
+                
+                // Reset form
+                contactForm.reset();
+            } else {
+                throw new Error('Failed to send message');
+            }
+        } catch (error) {
+            // Error
+            alert('Oops! Something went wrong. Please try again or email me directly.');
             
-            // Display success message
-            alert(`Thank you, ${name}! Your message has been sent successfully. I'll get back to you at ${email} soon.`);
-            
-            // Reset form
-            e.target.reset();
-        });
-    }
+            if (statusElement) {
+                statusElement.textContent = '✗ Failed to send. Please try again.';
+                statusElement.className = 'error';
+            }
+        } finally {
+            // Reset button state
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+        }
+    });
+}
 
     // Initialize project cards with smooth transitions
     document.querySelectorAll('.project-card').forEach(card => {

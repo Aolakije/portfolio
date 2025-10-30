@@ -1,4 +1,3 @@
-/* CSS Custom Properties for easy maintenance */
 :root {
     --primary-color: #88a2bf;
     --primary-hover: #9fb5d0;
@@ -237,7 +236,7 @@ nav a:hover {
 
 /* Section Styles */
 section {
-    padding: 100px 50px;
+    padding: 100px 20px;
     min-height: auto;
 }
 
@@ -251,7 +250,6 @@ section {
 }
 
 /* About Section */
-/* Keep your existing #about styles */
 #about {
     text-align: center;
 }
@@ -284,7 +282,6 @@ section {
     align-items: center;
 }
 
-/* Universe.io Card Styles - Integrated with your theme */
 .container {
     position: relative;
     width: 100%;
@@ -799,7 +796,7 @@ section {
 }
 
 .project-card {
-    background: var(--card-bg);
+    background: rgba(136, 162, 191, 0.1);
     border-radius: 10px;
     overflow: hidden;
     transition: all var(--transition-speed) ease;
@@ -815,12 +812,12 @@ section {
 
 .project-image {
     width: 100%;
-    height: 200px;
-    background: linear-gradient(135deg, #5a7a9e, var(--primary-color));
+    height: 100px;
+    background: linear-gradient(150deg, var(--primary-color), var(--dark-bg) 85%);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 .project-info {
@@ -862,6 +859,7 @@ section {
 /* Services Section */
 #services {
     padding-top: 20px;
+    margin-top: -50px;
 }
 
 .services-grid {
@@ -874,7 +872,7 @@ section {
 
 .service-card {
     background: var(--card-bg);
-    padding: 40px 30px;
+    padding: 20px 10px;
     border-radius: 10px;
     text-align: center;
     transition: all var(--transition-speed) ease;
